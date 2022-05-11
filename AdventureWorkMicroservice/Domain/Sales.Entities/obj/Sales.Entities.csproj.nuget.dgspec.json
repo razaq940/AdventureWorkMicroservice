@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {}
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
         "projectName": "Sales.Entities",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

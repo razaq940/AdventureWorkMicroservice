@@ -1,139 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj": {}
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj": {
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj",
-        "projectName": "Sales.Contracts",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
-        "projectName": "Sales.LoggerService",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "NLog.Extensions.Logging": {
-              "target": "Package",
-              "version": "[1.7.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
         "projectName": "Sales.Entities",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -206,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
         "projectName": "Sales.Repository",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -266,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj": {
+    "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
         "projectName": "Sales.WebApi",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -290,14 +168,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj"
+              "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj"
               },
-              "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj"
+              "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj"
               },
-              "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj"
+              "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Bootcamp\\BATCH_ASTRA\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj"
               }
             }
           }
