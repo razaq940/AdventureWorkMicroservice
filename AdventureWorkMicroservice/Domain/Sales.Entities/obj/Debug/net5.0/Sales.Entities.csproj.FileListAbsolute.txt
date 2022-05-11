@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\bin\Debug\net5.0\Sales.Entities.deps.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\bin\Debug\net5.0\Sales.Entities.runtimeconfig.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\bin\Debug\net5.0\Sales.Entities.runtimeconfig.dev.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\bin\Debug\net5.0\Sales.Entities.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\bin\Debug\net5.0\Sales.Entities.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.AssemblyInfo.cs
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\refint\Sales.Entities.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\Sales.Entities.genruntimeconfig.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Domain\Sales.Entities\obj\Debug\net5.0\ref\Sales.Entities.dll

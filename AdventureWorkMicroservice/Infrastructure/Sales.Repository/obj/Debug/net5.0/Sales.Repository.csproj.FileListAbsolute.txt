@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.deps.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.AssemblyInfo.cs
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\refint\Sales.Repository.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\ref\Sales.Repository.dll

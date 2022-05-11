@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.ILoggerService.deps.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.ILoggerService.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.ILoggerService.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.Contracts.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.Entities.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.Contracts.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\bin\Debug\net5.0\Sales.Entities.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.AssemblyInfo.cs
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.csproj.CopyComplete
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\refint\Sales.ILoggerService.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\Sales.ILoggerService.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.ILoggerService\obj\Debug\net5.0\ref\Sales.ILoggerService.dll
