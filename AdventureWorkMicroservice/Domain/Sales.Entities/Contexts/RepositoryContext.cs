@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Sales.Entities.Models
 {
-    public partial class AdventureWorks2019Context : DbContext
+    public partial class RepositoryContext : DbContext
     {
-        public AdventureWorks2019Context()
+        public RepositoryContext()
         {
         }
 
-        public AdventureWorks2019Context(DbContextOptions<AdventureWorks2019Context> options)
+        public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options)
         {
         }
