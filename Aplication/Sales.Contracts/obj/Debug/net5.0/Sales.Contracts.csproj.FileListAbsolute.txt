@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\bin\Debug\net5.0\Sales.Contracts.deps.json
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\bin\Debug\net5.0\Sales.Contracts.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\bin\Debug\net5.0\Sales.Contracts.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\bin\Debug\net5.0\Sales.Entities.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\bin\Debug\net5.0\Sales.Entities.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.AssemblyInfo.cs
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.csproj.CopyComplete
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\refint\Sales.Contracts.dll
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\Sales.Contracts.pdb
+C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Aplication\Sales.Contracts\obj\Debug\net5.0\ref\Sales.Contracts.dll
