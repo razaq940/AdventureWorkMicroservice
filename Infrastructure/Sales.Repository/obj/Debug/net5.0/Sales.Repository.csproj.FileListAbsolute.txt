@@ -22,3 +22,8 @@ C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMic
 C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\refint\Sales.Repository.dll
 C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.pdb
 C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\ref\Sales.Repository.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Contracts.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Entities.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Contracts.pdb
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Entities.pdb
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.csproj.CopyComplete

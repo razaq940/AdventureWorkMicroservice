@@ -229,7 +229,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj": {
+                "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

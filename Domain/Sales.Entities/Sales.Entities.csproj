@@ -19,11 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contexts\" />
-    <Folder Include="DTO\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Models\" />
-    <Folder Include="RequestFeatures\" />
   </ItemGroup>
 
 </Project>

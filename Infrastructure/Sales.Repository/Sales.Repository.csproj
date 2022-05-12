@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\..\Aplication\Sales.Contracts\Sales.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

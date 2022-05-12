@@ -1713,7 +1713,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "Sales.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Sales.Repository.dll": {}
