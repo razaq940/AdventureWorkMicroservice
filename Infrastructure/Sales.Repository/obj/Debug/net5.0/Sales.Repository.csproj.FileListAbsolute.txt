@@ -10,3 +10,15 @@ C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicrose
 C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\refint\Sales.Repository.dll
 C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.pdb
 C:\Users\User\Desktop\Abdul Razaq\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\ref\Sales.Repository.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.deps.json
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\bin\Debug\net5.0\Sales.Repository.pdb
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.csproj.AssemblyReference.cache
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.AssemblyInfoInputs.cache
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.AssemblyInfo.cs
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.csproj.CoreCompileInputs.cache
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\refint\Sales.Repository.dll
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\Sales.Repository.pdb
+C:\bootcamp\AdventureWorkMicroservice\AdventureWorkMicroservice\AdventureWorkMicroservice\Infrastructure\Sales.Repository\obj\Debug\net5.0\ref\Sales.Repository.dll

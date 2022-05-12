@@ -6117,11 +6117,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
+      "projectUniqueName": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
       "projectName": "Sales.WebApi",
-      "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
+      "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\Sales.WebApi.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\obj\\",
+      "outputPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\WebApi\\Sales.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6138,14 +6138,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj"
+            "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj": {
+              "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj"
+            "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj": {
+              "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Domain\\Sales.Entities\\Sales.Entities.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj"
+            "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
+              "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj"
             }
           }
         }

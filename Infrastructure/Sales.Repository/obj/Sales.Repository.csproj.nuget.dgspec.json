@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {}
+    "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
+    "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
+        "projectUniqueName": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
         "projectName": "Sales.Repository",
-        "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
+        "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\Sales.Repository.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\obj\\",
+        "outputPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Infrastructure\\Sales.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

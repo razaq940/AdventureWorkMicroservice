@@ -5982,11 +5982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
+      "projectUniqueName": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
       "projectName": "Sales.LoggerService",
-      "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
+      "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\Sales.LoggerService.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\obj\\",
+      "outputPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.ILoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6003,8 +6003,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Abdul Razaq\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj"
+            "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj": {
+              "projectPath": "C:\\bootcamp\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\AdventureWorkMicroservice\\Aplication\\Sales.Contracts\\Sales.Contracts.csproj"
             }
           }
         }
