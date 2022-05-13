@@ -9,6 +9,8 @@ namespace Sales.WebApi.Mapping
         public MappingProfile()
         {
         CreateMap<Customer, CustomerDto>().ReverseMap();
+
+        CreateMap<VSearchCustomer, CustomerDto>().ReverseMap();
         }
     }
 }

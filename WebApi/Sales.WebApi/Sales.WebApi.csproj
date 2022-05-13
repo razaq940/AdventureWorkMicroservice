@@ -27,4 +27,8 @@
     <ProjectReference Include="..\..\Infrastructure\Sales.Repository\Sales.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

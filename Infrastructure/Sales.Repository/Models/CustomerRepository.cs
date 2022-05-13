@@ -11,13 +11,29 @@ using System.Threading.Tasks;
 
 namespace Sales.Repository.Models
 {
-    public class CustomerRepository : RepositoryBase<Customer>, ICustomerRepository
+    public class CustomerRepository : RepositoryBase<VSearchCustomer>, ICustomerRepository
     {
         public CustomerRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
 
-        public void CreateCustomerAsync(Customer customer)
+        public async Task<IEnumerable<VSearchCustomer>> SearchCustomer(CustomerParameters customerParameters, bool trackChanges)
+        {
+            if (string.IsNullOrWhiteSpace(customerParameters.SearchCust))
+            {
+                return await FindAll(trackChanges).ToListAsync();
+            }
+
+            var lowerCaseSearch = customerParameters.SearchCust.Trim().ToLower();
+            return await FindAll(trackChanges)
+            .Where(c => c.CustomerId.ToString().ToLower() == lowerCaseSearch)
+            .OrderBy(c => c.CustomerId)
+            .Skip((customerParameters.PageNumber - 1) * customerParameters.PageSize)
+            .Take(customerParameters.PageSize)
+            .ToListAsync();
+        }
+
+        /*public void CreateCustomerAsync(Customer customer)
         {
             Create(customer);
         }
@@ -46,7 +62,7 @@ namespace Sales.Repository.Models
              .ToListAsync();
         }
 
-        public async Task<IEnumerable<Customer>> SearchCustomer(CustomerParameters customerParameters, bool trackChanges)
+        public async Task<IEnumerable<VSearchCustomer>> SearchCustomer(CustomerParameters customerParameters, bool trackChanges)
         {
             if (string.IsNullOrWhiteSpace(customerParameters.SearchCust))
             {
@@ -65,6 +81,6 @@ namespace Sales.Repository.Models
         public void UpdateCustomerAsync(Customer customer)
         {
             Update(customer);
-        }
+        }*/
     }
 }

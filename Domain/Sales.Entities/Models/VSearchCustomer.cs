@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sales.Entities.DTO
+#nullable disable
+
+namespace Sales.Entities.Models
 {
-    public class CustomerDto
+    public partial class VSearchCustomer
     {
         public int CustomerId { get; set; }
         public string PersonType { get; set; }

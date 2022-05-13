@@ -10,14 +10,6 @@ namespace Sales.Contracts.Interface
 {
     public interface ICustomerRepository
     {
-        Task<IEnumerable<Customer>> GetAllCustomerAsync(bool trackChanges);
-        Task<Customer> GetCustomerAsync(string id, bool trackChanges);
-        Task<IEnumerable<Customer>> GetPaginationCustomerAsync(CustomerParameters customerParameters, bool trackChanges);
-        Task<IEnumerable<Customer>> SearchCustomer(CustomerParameters customerParameters, bool trackChanges);
-        void CreateCustomerAsync(Customer customer);
-
-        void DeleteCustomerAsync(Customer customer);
-
-        void UpdateCustomerAsync(Customer customer);
+        Task<IEnumerable<VSearchCustomer>> SearchCustomer(CustomerParameters customerParameters, bool trackChanges);
     }
 }
