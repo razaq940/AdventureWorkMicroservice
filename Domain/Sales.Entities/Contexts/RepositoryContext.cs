@@ -46,6 +46,7 @@ namespace Sales.Entities.Contexts
         public virtual DbSet<VStoreWithDemographic> VStoreWithDemographics { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<VSearchCustomer> VSearchCustomers { get; set; }
+        public virtual DbSet<VSearchSalesPerson> VSearchSalesPeople { get; set; }
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -59,6 +60,35 @@ namespace Sales.Entities.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<VSearchSalesPerson>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vSearchSalesPerson");
+
+                entity.Property(e => e.Bonus).HasColumnType("money");
+
+                entity.Property(e => e.CommissionPct).HasColumnType("smallmoney");
+
+                entity.Property(e => e.EmailAddress).HasMaxLength(50);
+
+                entity.Property(e => e.FullName)
+                    .IsRequired()
+                    .HasMaxLength(150);
+
+                entity.Property(e => e.JobTitle).HasMaxLength(50);
+
+                entity.Property(e => e.SalesLastYear).HasColumnType("money");
+
+                entity.Property(e => e.SalesQuota).HasColumnType("money");
+
+                entity.Property(e => e.SalesYtd)
+                    .HasColumnType("money")
+                    .HasColumnName("SalesYTD");
+
+                entity.Property(e => e.Territory).HasMaxLength(50);
+            });
 
             modelBuilder.Entity<VSearchCustomer>(entity =>
             {

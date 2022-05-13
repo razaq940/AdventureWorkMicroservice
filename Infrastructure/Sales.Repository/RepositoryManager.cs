@@ -14,6 +14,7 @@ namespace Sales.Repository
     {
         private RepositoryContext _repositoryContext;
         private ICustomerRepository _customersRepository;
+        private ISalesPersonRepository _salesPersonRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -32,6 +33,20 @@ namespace Sales.Repository
             }
 
         }
+
+        public ISalesPersonRepository SPersons
+        {
+            get
+            {
+                if (_salesPersonRepository == null)
+                {
+                    _salesPersonRepository = new SalesPersonRepository(_repositoryContext);
+                }
+                return _salesPersonRepository;
+            }
+
+        }
+
 
         public void Save()
         {

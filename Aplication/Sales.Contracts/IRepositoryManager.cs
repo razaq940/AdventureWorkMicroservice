@@ -10,6 +10,7 @@ namespace Sales.Contracts
     public interface IRepositoryManager
     {
         ICustomerRepository Customers { get; }
+        ISalesPersonRepository SPersons { get; }
 
         public void Save();
         Task SaveAsync();
