@@ -26,13 +26,27 @@ namespace Sales.Repository.Models
 
             var lowerCaseSearch = customerParameters.SearchCust.Trim().ToLower();
             return await FindAll(trackChanges)
-            .Where(c => c.CustomerId.ToString().ToLower() == lowerCaseSearch)
+            .Where(c => c.CustomerId.ToString().ToLower() == lowerCaseSearch || c.FullName.ToLower().Contains(lowerCaseSearch) || c.StoreName.ToLower().Contains(lowerCaseSearch) || c.Territory.ToLower().Contains(lowerCaseSearch))
             .OrderBy(c => c.CustomerId)
             .Skip((customerParameters.PageNumber - 1) * customerParameters.PageSize)
             .Take(customerParameters.PageSize)
             .ToListAsync();
         }
+        /*public async Task<IEnumerable<VSearchCustomer>> SearchCustomerbyName(CustomerParameters customerParameters, bool trackChanges)
+        {
+            if (string.IsNullOrWhiteSpace(customerParameters.SearchCust))
+            {
+                return await FindAll(trackChanges).ToListAsync();
+            }
 
+            var lowerCaseSearch = customerParameters.SearchCust.Trim().ToLower();
+            return await FindAll(trackChanges)
+            .Where(c => c.CustomerId.ToString().ToLower() == lowerCaseSearch || c.FullName.ToLower().Contains(lowerCaseSearch) || c.StoreName.ToLower().Contains(lowerCaseSearch) || c.Territory.ToLower().Contains(lowerCaseSearch))
+             .OrderBy(c => c.CustomerId)
+            .Skip((customerParameters.PageNumber - 1) * customerParameters.PageSize)
+            .Take(customerParameters.PageSize)
+            .ToListAsync();
+        }*/
         /*public void CreateCustomerAsync(Customer customer)
         {
             Create(customer);
