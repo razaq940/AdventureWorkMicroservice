@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sales.Entities.Models;
-using Sales.Contracts.Interface;
+using Sales.Contracts.Interface.AECInterface;
 using Sales.Entities.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Sales.Entities.RequestFeatures;
@@ -18,6 +18,7 @@ namespace Sales.Repository.Models
     {
         public StoreRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
+
         }
 
         public void CreateStore(Store store)
@@ -43,8 +44,8 @@ namespace Sales.Repository.Models
         public async Task<Store> GetStoreAsync(int id, bool trackChanges)
         {
 
-            return await FindByCondition(c => c.BusinessEntityId.Equals(id), trackChanges)
-                .SingleOrDefaultAsync();
+            return await FindByCondition(c => c.SalesPersonId.Equals(id), trackChanges)
+                .FirstOrDefaultAsync();
         }
 
         public void UpdateStore(Store store)

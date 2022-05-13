@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sales.Contracts.Interface
+namespace Sales.Contracts.Interface.AECInterface
 {
     public interface IStoreRepository
     {
         Task<IEnumerable<Store>> GetAllStoreAsync(bool trackChanges);
 
-        Task<Store> GetStoreAsync(int id, bool trackChanges);
+        Task<Store> GetStoreAsync(int Personid, bool trackChanges);
 
         void CreateStore(Store store);
 

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sales.Contracts.Interface
+namespace Sales.Entities.DTO.AECDTO
 {
-    internal interface IPersonRepository
+    public class StoreAECDTO
     {
+        public string Name { get; set; }
     }
 }

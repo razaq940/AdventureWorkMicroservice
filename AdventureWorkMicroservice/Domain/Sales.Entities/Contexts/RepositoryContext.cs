@@ -45,6 +45,7 @@ namespace Sales.Entities.Contexts
         public virtual DbSet<VStoreWithContact> VStoreWithContacts { get; set; }
         public virtual DbSet<VStoreWithDemographic> VStoreWithDemographics { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<BusinessEntity> BusinessEntities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -58,6 +59,31 @@ namespace Sales.Entities.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<BusinessEntity>(entity =>
+            {
+                entity.ToTable("BusinessEntity", "Person");
+
+                entity.HasComment("Source of the ID that connects vendors, customers, and employees with address and contact information.");
+
+                entity.HasIndex(e => e.Rowguid, "AK_BusinessEntity_rowguid")
+                    .IsUnique();
+
+                entity.Property(e => e.BusinessEntityId)
+                    .HasColumnName("BusinessEntityID")
+                    .HasComment("Primary key for all customers, vendors, and employees.");
+
+                entity.Property(e => e.ModifiedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())")
+                    .HasComment("Date and time the record was last updated.");
+
+                entity.Property(e => e.Rowguid)
+                    .HasColumnName("rowguid")
+                    .HasDefaultValueSql("(newid())")
+                    .HasComment("ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.");
+            });
+
 
             modelBuilder.Entity<Person>(entity =>
             {

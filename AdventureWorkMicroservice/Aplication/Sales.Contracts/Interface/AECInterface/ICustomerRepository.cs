@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Sales.Contracts.Interface
+namespace Sales.Contracts.Interface.AECInterface
 {
     public interface ICustomerRepository
     {

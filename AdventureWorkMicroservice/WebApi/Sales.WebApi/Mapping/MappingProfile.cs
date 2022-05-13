@@ -1,25 +1,18 @@
 ﻿using AutoMapper;
-using Northwind.Entities.Models;
-using Northwind.Entities.DTO;
+using Sales.Entities.Models;
+using Sales.Entities.DTO.AECDTO;
 
-namespace NorthwinWebApi.Mapping
+namespace Sales.WebApi.Mapping
 {
     public class MappingProfile : Profile
     {
         public MappingProfile()
         {
-            CreateMap<Category, CategoryDto>().ReverseMap();
-           
-            CreateMap<Customer, CustomerDto>().ReverseMap();
-            //CreateMap<CustomerDto, Customer>();
-            CreateMap<ProductDto, Product>().ReverseMap();
-            //CreateMap<Product, ProductDto>();
-            CreateMap<OrderDetail, OrderDetailDto>().ReverseMap();
-            CreateMap<Order, OrderDto>().ReverseMap();
-            CreateMap<CustomerUpdateDto, Customer>().ReverseMap();
-            CreateMap<CategoryUpdateDto, Category>().ReverseMap();
-            CreateMap<UserForRegistrationDto, User>().ReverseMap();
-            
+
+            CreateMap<Person, PersonAECDTO>().ReverseMap();
+            CreateMap<Store, StoreAECDTO>().ReverseMap();
+            CreateMap<SalesTerritory, SalesTeritoryAECDTO>().ReverseMap();
+
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sales.Entities.DTO
+namespace Sales.Entities.DTO.AECDTO
 {
     public class CustomerPersonAECDTO
     {

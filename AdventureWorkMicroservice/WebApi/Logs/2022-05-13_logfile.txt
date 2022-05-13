@@ -1,0 +1,22 @@
+2022-05-13 15:00:34.5521 ERROR Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AsyncStateMachineBox`1 -> StoreAECDTO
+System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[Sales.Entities.Models.Store, Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Sales.Repository.AddEditCustomerService+<SearchStoreByPersonId>d__6, Sales.Repository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Sales.Entities.DTO.StoreAECDTO
+2022-05-13 15:06:34.5391 ERROR Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Boolean -> StoreAECDTO
+System.Boolean -> Sales.Entities.DTO.StoreAECDTO
+2022-05-13 15:44:04.8186 ERROR Sequence contains more than one element.
+2022-05-13 22:51:52.2433 ERROR person name not found
+2022-05-13 22:52:32.1083 ERROR Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Store -> IEnumerable`1
+Sales.Entities.Models.Store -> System.Collections.Generic.IEnumerable`1[[Sales.Entities.DTO.AECDTO.StoreAECDTO, Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2022-05-13 23:03:15.5791 ERROR Error mapping types.
+
+Mapping types:
+WhereListIterator`1 -> IEnumerable`1
+System.Linq.Enumerable+WhereListIterator`1[[Sales.Entities.Models.Person, Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Sales.Entities.DTO.AECDTO.CustomerPersonAECDTO, Sales.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
