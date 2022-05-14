@@ -25,18 +25,52 @@ namespace Sales.Repository
         
 
         
-        public Task<bool> SaveAddEditCustomer(StoreAECDTO storeAECDTO, CustomerPersonAECDTO customerPersonAECDTO)
+        public async Task<bool> SaveAddEditCustomer(CustomerPersonAECDTO customerPersonAECDTO)
         {
-            /*
-            var person = new Person();
+            /*di mokap ini hanya bisa 
+             * adit store("add store tidak bisa"), 
+             * add customer dengan type individual("tidak bisa add customer dengan type store"),
+             * edit customer type individual dan store
+             **/
+            try
+            {
+                
+                var store = await _repository.Store.GetStoreAsync(customerPersonAECDTO.BusinessEntityId, trackChanges: true);
+                //edit store name
+                if (customerPersonAECDTO.NameStore != store.Name )
+                {
+                    store.Name = customerPersonAECDTO.NameStore;
+                    _repository.Store.UpdateStore(store);
+                    await _repository.SaveAsync();
+                }
+                
+                var cstmr = _repository.Customers.GetAllCustomerAsync(trackChanges: true).Result.Where(c => c.PersonId == customerPersonAECDTO.BusinessEntityId || c.StoreId == customerPersonAECDTO.BusinessEntityId ).FirstOrDefault();
+                //add new customer
+                if (cstmr == null)
+                {
+                    
+                    cstmr.PersonId = customerPersonAECDTO.BusinessEntityId;
+                    cstmr.ModifiedDate = DateTime.UtcNow;
+                    cstmr.TerritoryId = customerPersonAECDTO.TerritoryId;
+                    _repository.Customers.CreateCustomer(cstmr);
+                    await _repository.SaveAsync();
+                    return true;
+                }
+                //edit customer
+                cstmr.TerritoryId = customerPersonAECDTO.TerritoryId;
+                _repository.Customers.UpdateCustomer(cstmr);
+                await _repository.SaveAsync();
+                return true;
 
-            var store = new Store();
-            store.Name = storeAECDTO.Name;
-            store.ModifiedDate = DateTime.Now;
-            _repository.Store.CreateStore(store);
-            _repository.SaveAsync();
-            */
-            throw new NotImplementedException();
+                
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+            
+            //throw new NotImplementedException();
 
         }
         
@@ -63,7 +97,8 @@ namespace Sales.Repository
         {
             try
             {
-                var stores =  _repository.Store.GetAllStoreAsync(trackChanges: false).Result.Where(c=>c.SalesPersonId==personId);
+                var stores =  _repository.Store.GetAllStoreAsync(trackChanges: false).Result.Where(c=>c.BusinessEntityId==personId);
+
                 return stores;
             }
             catch(Exception Ex)

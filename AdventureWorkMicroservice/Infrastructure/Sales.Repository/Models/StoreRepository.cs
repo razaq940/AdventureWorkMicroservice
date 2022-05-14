@@ -41,10 +41,10 @@ namespace Sales.Repository.Models
         }
 
 
-        public async Task<Store> GetStoreAsync(int id, bool trackChanges)
+        public async Task<Store> GetStoreAsync(int personId, bool trackChanges)
         {
 
-            return await FindByCondition(c => c.SalesPersonId.Equals(id), trackChanges)
+            return await FindByCondition(c => c.BusinessEntityId.Equals(personId), trackChanges)
                 .FirstOrDefaultAsync();
         }
 

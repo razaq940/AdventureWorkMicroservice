@@ -13,6 +13,6 @@ namespace Sales.Contracts
         Task<IEnumerable<Person>> SearchPersonByName(string personName);
         Task<IEnumerable<SalesTerritory>> SearchSalesTeritoryByTeritoryId(int teritoryId);
         Task<IEnumerable<Store>> SearchStoreByPersonId(int personId);
-        Task<bool> SaveAddEditCustomer(StoreAECDTO storeAECDTO,  CustomerPersonAECDTO customerPersonAECDTO);
+        Task<bool> SaveAddEditCustomer(CustomerPersonAECDTO customerPersonAECDTO);
     }
 }

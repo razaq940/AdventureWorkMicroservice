@@ -31,6 +31,24 @@ namespace Sales.WebApi.Controllers
             _mapper = mapper;
             
         }
+        [HttpPost]
+        public async Task<IActionResult> SaveAddEditCustomer(CustomerPersonAECDTO customerPersonAECDTO)
+        {
+            try
+            {
+                var result =  _addEditCustomersService.SaveAddEditCustomer(customerPersonAECDTO);
+                if(!result.Result)
+                {
+                    return BadRequest("save or edit failed");
+                }
+                return Ok("Succes");
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetSalesTeritory(int teritoryId)
@@ -58,8 +76,9 @@ namespace Sales.WebApi.Controllers
             try
             {
                 var result = await _addEditCustomersService.SearchStoreByPersonId(personId);
-                if(result == null)
+                if(result.Count() == 0)
                 {
+                    _logger.LogError("PersonID Not Found");
                     return BadRequest("PersonID Not Found");
                 }
                 return Ok(_mapper.Map<IEnumerable<StoreAECDTO>>(result));
