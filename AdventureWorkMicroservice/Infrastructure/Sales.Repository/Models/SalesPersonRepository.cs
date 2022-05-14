@@ -15,6 +15,16 @@ namespace Sales.Repository.Models
         {
         }
 
+        public void CreateSalesPersonAsync(SalesPerson salesPerson)
+        {
+            Create(salesPerson);
+        }
+
+        public void DeleteSalesPersonAsync(SalesPerson salesPerson)
+        {
+            Delete(salesPerson);
+        }
+
         public async Task<IEnumerable<SalesPerson>> GetAllSalesPersonAsync(bool trackChanges) =>
             await FindAll(trackChanges)
                     .OrderBy(sp => sp.BusinessEntityId)
@@ -22,5 +32,10 @@ namespace Sales.Repository.Models
 
         public async Task<SalesPerson> GetSalesPersonAsync(int id, bool trackChanges) =>
             await FindByCondition(sp => sp.BusinessEntityId.Equals(id), trackChanges).SingleOrDefaultAsync();
+
+        public void UpdateSalesPersonAsync(SalesPerson salesPerson)
+        {
+            Update(salesPerson);
+        }
     }
 }

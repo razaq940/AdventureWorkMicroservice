@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sales.Entities.RequestFeatures
 {
-    public class SalesTerritoryParameters : RequestParameters
+    public class EmployeePersonParameters : RequestParameters
     {
-        public string SearchTerritory { get; set; }
+        public string SearchEmployeeName { get; set; }
     }
 }

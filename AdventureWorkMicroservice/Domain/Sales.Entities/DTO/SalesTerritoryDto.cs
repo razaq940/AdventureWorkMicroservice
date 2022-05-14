@@ -8,6 +8,7 @@ namespace Sales.Entities.DTO
 {
     public class SalesTerritoryDto
     {
+        public int TerritoryId { get; set; }
         public string Name { get; set; }
         public string CountryRegionCode { get; set; }
         public string Group { get; set; }

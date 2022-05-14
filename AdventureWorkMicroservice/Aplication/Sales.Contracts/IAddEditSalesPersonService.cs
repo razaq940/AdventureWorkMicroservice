@@ -10,7 +10,10 @@ namespace Sales.Contracts
 {
     public interface IAddEditSalesPersonService
     {
-        Task<SalesTerritory> SearchSalesTerritoryById(int territoryId);
-        //Task<SalesPerson> AddEditSalesPersonAsync(AddEditSalesPersonDto addEditSalesPersonDto, bool trackChanges);
+        Task<SalesTerritory> SearchSalesTerritoryById(int territoryId, AddEditSalesPersonDto addEditSalesPersonDto);
+        Task<IEnumerable<Store>> SearchStore(string name);
+        Task<IEnumerable<vEmployeePerson>> SeacrhEmployeePerson(string name);
+        Task<bool> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto);
+        
     }
 }

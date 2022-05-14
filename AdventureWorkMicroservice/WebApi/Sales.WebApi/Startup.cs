@@ -36,6 +36,7 @@ namespace Sales.WebApi
             services.ConfigureDbContext(Configuration);
 
             services.ConfigureRepositoryManager();
+            services.ConfigureAddEditSalesPersonService();
 
             //call automapper config
             services.AddAutoMapper(typeof(Startup));

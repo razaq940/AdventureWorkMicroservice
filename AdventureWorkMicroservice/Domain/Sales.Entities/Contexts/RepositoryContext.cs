@@ -45,6 +45,8 @@ namespace Sales.Entities.Models
         public virtual DbSet<VStoreWithDemographic> VStoreWithDemographics { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<BusinessEntity> BusinessEntities { get; set; }
+        public virtual DbSet<vEmployeePerson> vEmployeePeople { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -1476,6 +1478,49 @@ namespace Sales.Entities.Models
                 entity.Property(e => e.SickLeaveHours).HasComment("Number of available sick leave hours.");
 
                 entity.Property(e => e.VacationHours).HasComment("Number of available vacation hours.");
+            });
+
+            modelBuilder.Entity<BusinessEntity>(entity =>
+            {
+                entity.ToTable("BusinessEntity", "Person");
+
+                entity.HasComment("Source of the ID that connects vendors, customers, and employees with address and contact information.");
+
+                entity.HasIndex(e => e.Rowguid, "AK_BusinessEntity_rowguid")
+                    .IsUnique();
+
+                entity.Property(e => e.BusinessEntityId)
+                    .HasColumnName("BusinessEntityID")
+                    .HasComment("Primary key for all customers, vendors, and employees.");
+
+                entity.Property(e => e.ModifiedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())")
+                    .HasComment("Date and time the record was last updated.");
+
+                entity.Property(e => e.Rowguid)
+                    .HasColumnName("rowguid")
+                    .HasDefaultValueSql("(newid())")
+                    .HasComment("ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.");
+            });
+
+            modelBuilder.Entity<vEmployeePerson>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vEmployeePerson");
+
+                entity.Property(e => e.FullName)
+                    .IsRequired()
+                    .HasMaxLength(152);
+
+                entity.Property(e => e.JobTitle)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.NationalIDNumber)
+                    .IsRequired()
+                    .HasMaxLength(15);
             });
 
             OnModelCreatingPartial(modelBuilder);

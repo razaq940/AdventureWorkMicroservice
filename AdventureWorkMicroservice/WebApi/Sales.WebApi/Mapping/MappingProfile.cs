@@ -9,6 +9,9 @@ namespace Sales.WebApi.Mapping
         public MappingProfile()
         {
             CreateMap<SalesTerritory, SalesTerritoryDto>().ReverseMap();
+            CreateMap<Store, StoreDto>().ReverseMap();
+            CreateMap<vEmployeePerson, VEmployeePersonDto>().ReverseMap();
+            CreateMap<SalesPerson, AddEditSalesPersonDto>().ReverseMap();
         }
     }
 }

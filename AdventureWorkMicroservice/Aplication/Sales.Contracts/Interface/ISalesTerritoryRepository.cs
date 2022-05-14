@@ -12,6 +12,5 @@ namespace Sales.Contracts.Interface
     {
         Task<IEnumerable<SalesTerritory>> GetAllSalesTerritoryAsync(bool trackChanges);
         Task<SalesTerritory> GetSalesTerritory(int id, bool trackChanges);
-        Task<SalesTerritory> SearchTerritory(SalesTerritoryParameters salesTerritoryParameters, bool trackChanges);
     }
 }

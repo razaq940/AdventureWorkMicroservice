@@ -40,5 +40,8 @@ namespace Sales.WebApi.Extensions
 
         public static void ConfigureRepositoryManager(this IServiceCollection service) =>
             service.AddScoped<IRepositoryManager, RepositoryManager>();
+
+        public static void ConfigureAddEditSalesPersonService(this IServiceCollection service) =>
+            service.AddScoped<IAddEditSalesPersonService, AddEditSalesPersonRepository>();
     }
 }

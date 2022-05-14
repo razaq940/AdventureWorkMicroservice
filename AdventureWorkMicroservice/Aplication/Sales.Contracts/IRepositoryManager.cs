@@ -13,6 +13,10 @@ namespace Sales.Contracts
         IEmployeeRepository Employee { get; }
         IPersonRepository Person { get; }
         ISalesPersonRepository SalesPerson { get; }
+        IStoreRepository Store { get; }
+        IBusinessEntityRepository BusinessEntity { get; }
+        IVEmployeePersonRepository EmployeePerson { get; }
+        ISalesPersonQuotaHistoryRepository SalesPersonQuotaHistory { get; }
         Task SaveAsync();
     }
 }

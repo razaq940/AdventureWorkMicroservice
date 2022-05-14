@@ -11,5 +11,8 @@ namespace Sales.Contracts.Interface
     {
         Task<IEnumerable<SalesPerson>> GetAllSalesPersonAsync(bool trackChanges);
         Task<SalesPerson> GetSalesPersonAsync(int id, bool trackChanges);
+        void CreateSalesPersonAsync(SalesPerson salesPerson);
+        void UpdateSalesPersonAsync(SalesPerson salesPerson);
+        void DeleteSalesPersonAsync(SalesPerson salesPerson);
     }
 }

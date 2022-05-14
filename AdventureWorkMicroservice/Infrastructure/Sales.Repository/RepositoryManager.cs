@@ -17,6 +17,10 @@ namespace Sales.Repository
         private IEmployeeRepository _employeeRepository;
         private IPersonRepository _personRepository;
         private ISalesPersonRepository _salesPersonRepository;
+        private IStoreRepository _storeRepository;
+        private IBusinessEntityRepository _businessEntityRepository;
+        private IVEmployeePersonRepository _vemployeePersonRepository;
+        private ISalesPersonQuotaHistoryRepository _salesPersonQuotaHistoryRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -68,6 +72,53 @@ namespace Sales.Repository
                     _salesPersonRepository = new SalesPersonRepository(_repositoryContext);
                 }
                 return _salesPersonRepository;
+            }
+        }
+        public IStoreRepository Store
+        {
+            get
+            {
+                if (_storeRepository == null)
+                {
+                    _storeRepository = new StoreRepository(_repositoryContext);
+                }
+                return _storeRepository;
+            }
+        }
+
+        public IBusinessEntityRepository BusinessEntity
+        {
+            get
+            {
+                if (_businessEntityRepository == null)
+                {
+                    _businessEntityRepository = new BusinessEntityRepository(_repositoryContext);
+                }
+                return _businessEntityRepository;
+            }
+        }
+
+        public IVEmployeePersonRepository EmployeePerson
+        {
+            get
+            {
+                if (_vemployeePersonRepository == null)
+                {
+                    _vemployeePersonRepository = new VEmployeePersonRepository(_repositoryContext);
+                }
+                return _vemployeePersonRepository;
+            }
+        }
+
+        public ISalesPersonQuotaHistoryRepository SalesPersonQuotaHistory
+        {
+            get
+            {
+                if (_salesPersonQuotaHistoryRepository == null)
+                {
+                    _salesPersonQuotaHistoryRepository = new SalesPersonQuotaHistoryRepository(_repositoryContext);
+                }
+                return _salesPersonQuotaHistoryRepository;
             }
         }
 
