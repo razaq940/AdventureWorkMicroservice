@@ -12,6 +12,7 @@ namespace Sales.WebApi.Mapping
 
         CreateMap<VSearchCustomer, CustomerDto>().ReverseMap();
         CreateMap<VSearchSalesPerson, SalesPersonDto>().ReverseMap();
+        CreateMap<VProductOnSale, ProdOnSaleDto>().ReverseMap();
         }
     }
 }

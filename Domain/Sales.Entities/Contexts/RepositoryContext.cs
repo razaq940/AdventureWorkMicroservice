@@ -47,6 +47,7 @@ namespace Sales.Entities.Contexts
         public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<VSearchCustomer> VSearchCustomers { get; set; }
         public virtual DbSet<VSearchSalesPerson> VSearchSalesPeople { get; set; }
+        public virtual DbSet<VProductOnSale> VProductOnSales { get; set; }
 
         /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -60,6 +61,31 @@ namespace Sales.Entities.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<VProductOnSale>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vProductOnSale");
+
+                entity.Property(e => e.AvailableStock).HasColumnName("Available Stock");
+
+                entity.Property(e => e.Category)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Price).HasColumnType("money");
+
+                entity.Property(e => e.UnitMeasure)
+                    .IsRequired()
+                    .HasMaxLength(3)
+                    .HasColumnName("Unit Measure")
+                    .IsFixedLength(true);
+            });
 
             modelBuilder.Entity<VSearchSalesPerson>(entity =>
             {

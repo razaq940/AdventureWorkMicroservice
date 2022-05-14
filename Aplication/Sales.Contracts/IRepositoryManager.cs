@@ -12,6 +12,8 @@ namespace Sales.Contracts
         ICustomerRepository Customers { get; }
         ISalesPersonRepository SPersons { get; }
 
+        IProductOnSaleRepository ProdOnSale { get; }
+
         public void Save();
         Task SaveAsync();
     }

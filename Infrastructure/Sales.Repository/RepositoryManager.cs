@@ -15,6 +15,7 @@ namespace Sales.Repository
         private RepositoryContext _repositoryContext;
         private ICustomerRepository _customersRepository;
         private ISalesPersonRepository _salesPersonRepository;
+        private IProductOnSaleRepository _prodOnSaleRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -47,6 +48,17 @@ namespace Sales.Repository
 
         }
 
+        public IProductOnSaleRepository ProdOnSale
+        {
+            get
+            {
+                if (_prodOnSaleRepository == null)
+                {
+                    _prodOnSaleRepository = new ProductOnSaleRepository(_repositoryContext);
+                }
+                return _prodOnSaleRepository;
+            }
+        }
 
         public void Save()
         {
