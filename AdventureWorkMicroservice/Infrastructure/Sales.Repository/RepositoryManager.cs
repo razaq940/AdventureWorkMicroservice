@@ -21,6 +21,7 @@ namespace Sales.Repository
         private IBusinessEntityRepository _businessEntityRepository;
         private IVEmployeePersonRepository _vemployeePersonRepository;
         private ISalesPersonQuotaHistoryRepository _salesPersonQuotaHistoryRepository;
+        private IShoppingCartItemRepository _shoppingCartItemRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -119,6 +120,18 @@ namespace Sales.Repository
                     _salesPersonQuotaHistoryRepository = new SalesPersonQuotaHistoryRepository(_repositoryContext);
                 }
                 return _salesPersonQuotaHistoryRepository;
+            }
+        }
+
+        public IShoppingCartItemRepository shoppingCartItem
+        {
+            get
+            {
+                if (_shoppingCartItemRepository == null)
+                {
+                    _shoppingCartItemRepository = new ShoppingCartItemRepository(_repositoryContext);
+                }
+                return _shoppingCartItemRepository;
             }
         }
 

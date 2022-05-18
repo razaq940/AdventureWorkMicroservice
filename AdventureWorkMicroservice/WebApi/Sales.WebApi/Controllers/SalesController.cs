@@ -120,7 +120,7 @@ namespace Sales.WebApi.Controllers
                 {
                     return BadRequest("Save Failed");
                 }
-                return Ok("Success");
+                return NoContent();
             }
             catch (Exception ex)
             {

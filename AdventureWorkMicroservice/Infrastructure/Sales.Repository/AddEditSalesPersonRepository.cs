@@ -21,6 +21,36 @@ namespace Sales.Repository
             _repositoryManager = repositoryManager;
         }
 
+        public async Task<bool> AddToCartProduct(AddToCartDto addToCartDto)
+        {
+            try
+            {
+                var cartItems = await _repositoryManager.shoppingCartItem.GetShoppingCartItemAsync(addToCartDto.ProductId, trackChanges: true);
+
+                if (cartItems == null)
+                {
+                    ShoppingCartItem cartItem = new ShoppingCartItem();
+
+                    cartItem.ProductId = addToCartDto.ProductId;
+                    cartItem.ShoppingCartId = addToCartDto.CustomerId;
+                    cartItem.Quantity = 1;
+                    cartItem.ModifiedDate = DateTime.Now;
+                    cartItem.DateCreated = DateTime.Now;
+
+                    _repositoryManager.shoppingCartItem.CreateShoppingCartItem(cartItem);
+                    await _repositoryManager.SaveAsync();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _loggerManager.LogWarn($"message : {ex.Message}");
+                return false;
+            }
+            
+
+        }
+
         public async Task<bool> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto)
         {
             try

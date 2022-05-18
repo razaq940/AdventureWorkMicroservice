@@ -17,6 +17,7 @@ namespace Sales.Contracts
         IBusinessEntityRepository BusinessEntity { get; }
         IVEmployeePersonRepository EmployeePerson { get; }
         ISalesPersonQuotaHistoryRepository SalesPersonQuotaHistory { get; }
+        IShoppingCartItemRepository shoppingCartItem { get; }
         Task SaveAsync();
     }
 }
