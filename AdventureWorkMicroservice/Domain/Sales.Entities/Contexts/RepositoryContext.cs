@@ -48,6 +48,7 @@ namespace Sales.Entities.Models
         public virtual DbSet<BusinessEntity> BusinessEntities { get; set; }
         public virtual DbSet<vEmployeePerson> vEmployeePeople { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ShipMethod> ShipMethods { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -1643,6 +1644,48 @@ namespace Sales.Entities.Models
                     .HasMaxLength(3)
                     .IsFixedLength(true)
                     .HasComment("Unit of measure for Weight column.");
+            });
+
+            modelBuilder.Entity<ShipMethod>(entity =>
+            {
+                entity.ToTable("ShipMethod", "Purchasing");
+
+                entity.HasComment("Shipping company lookup table.");
+
+                entity.HasIndex(e => e.Name, "AK_ShipMethod_Name")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.Rowguid, "AK_ShipMethod_rowguid")
+                    .IsUnique();
+
+                entity.Property(e => e.ShipMethodId)
+                    .HasColumnName("ShipMethodID")
+                    .HasComment("Primary key for ShipMethod records.");
+
+                entity.Property(e => e.ModifiedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())")
+                    .HasComment("Date and time the record was last updated.");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasComment("Shipping company name.");
+
+                entity.Property(e => e.Rowguid)
+                    .HasColumnName("rowguid")
+                    .HasDefaultValueSql("(newid())")
+                    .HasComment("ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.");
+
+                entity.Property(e => e.ShipBase)
+                    .HasColumnType("money")
+                    .HasDefaultValueSql("((0.00))")
+                    .HasComment("Minimum shipping charge.");
+
+                entity.Property(e => e.ShipRate)
+                    .HasColumnType("money")
+                    .HasDefaultValueSql("((0.00))")
+                    .HasComment("Shipping charge per pound.");
             });
 
             OnModelCreatingPartial(modelBuilder);

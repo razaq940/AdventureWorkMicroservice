@@ -12,6 +12,7 @@ namespace Sales.WebApi.Mapping
             CreateMap<Store, StoreDto>().ReverseMap();
             CreateMap<vEmployeePerson, VEmployeePersonDto>().ReverseMap();
             CreateMap<SalesPerson, AddEditSalesPersonDto>().ReverseMap();
+            CreateMap<ShipMethod, ShipMethodDto>().ReverseMap();
         }
     }
 }

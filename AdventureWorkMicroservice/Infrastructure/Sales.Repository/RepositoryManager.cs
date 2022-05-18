@@ -22,6 +22,8 @@ namespace Sales.Repository
         private IVEmployeePersonRepository _vemployeePersonRepository;
         private ISalesPersonQuotaHistoryRepository _salesPersonQuotaHistoryRepository;
         private IShoppingCartItemRepository _shoppingCartItemRepository;
+        private IShipMethodRepository _shipMethodRepository;
+        private ISalesOrderHeaderRepository _salesOrderHeaderRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -123,7 +125,7 @@ namespace Sales.Repository
             }
         }
 
-        public IShoppingCartItemRepository shoppingCartItem
+        public IShoppingCartItemRepository ShoppingCartItem
         {
             get
             {
@@ -135,6 +137,29 @@ namespace Sales.Repository
             }
         }
 
+        public IShipMethodRepository ShipMethod
+        {
+            get
+            {
+                if (_shipMethodRepository == null)
+                {
+                    _shipMethodRepository = new ShipMethodRepository(_repositoryContext);
+                }
+                return _shipMethodRepository;
+            }
+        }
+
+        public ISalesOrderHeaderRepository SalesOrderHeader
+        {
+            get
+            {
+                if (_salesOrderHeaderRepository == null)
+                {
+                    _salesOrderHeaderRepository = new SalesOrderHeaderRepository(_repositoryContext);
+                }
+                return _salesOrderHeaderRepository;
+            }
+        }
         public async Task SaveAsync()
         {
             await _repositoryContext.SaveChangesAsync();

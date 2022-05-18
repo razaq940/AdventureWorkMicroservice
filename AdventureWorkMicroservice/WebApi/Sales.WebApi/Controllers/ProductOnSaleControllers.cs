@@ -12,14 +12,14 @@ namespace Sales.WebApi.Controllers
     public class ProductOnSaleControllers : Controller
     {
         private readonly IRepositoryManager _repository;
-        private readonly IAddEditSalesPersonService _addEditSalesPersonService;
+        private readonly IProductOnSaleService _productOnSaleService;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
 
-        public ProductOnSaleControllers(IRepositoryManager repository, IAddEditSalesPersonService addEditSalesPersonService, ILoggerManager logger, IMapper mapper)
+        public ProductOnSaleControllers(IRepositoryManager repository, IProductOnSaleService productOnSaleService, ILoggerManager logger, IMapper mapper)
         {
             _repository = repository;
-            _addEditSalesPersonService = addEditSalesPersonService;
+            _productOnSaleService = productOnSaleService;
             _logger = logger;
             _mapper = mapper;
         }
@@ -29,7 +29,7 @@ namespace Sales.WebApi.Controllers
         {
             try
             {
-                var result = await _addEditSalesPersonService.AddToCartProduct(addToCartDto);
+                var result = await _productOnSaleService.AddToCartProduct(addToCartDto);
                 if(!result)
                 {
                     return BadRequest("Add Failed");

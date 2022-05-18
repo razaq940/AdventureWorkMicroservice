@@ -37,6 +37,8 @@ namespace Sales.WebApi
 
             services.ConfigureRepositoryManager();
             services.ConfigureAddEditSalesPersonService();
+            services.ConfigureCartItemCreateOrderService();
+            services.ConfigureProductOnSaleService();
 
             //call automapper config
             services.AddAutoMapper(typeof(Startup));

@@ -14,7 +14,5 @@ namespace Sales.Contracts
         Task<IEnumerable<Store>> SearchStore(string name);
         Task<IEnumerable<vEmployeePerson>> SeacrhEmployeePerson(string name);
         Task<bool> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto);
-        Task<bool> AddToCartProduct(AddToCartDto addToCartDto);
-        
     }
 }

@@ -7,6 +7,7 @@ using Sales.Contracts;
 using Sales.Entities.Models;
 using Sales.LoggerService;
 using Sales.Repository;
+using Sales.Repository.Models;
 
 namespace Sales.WebApi.Extensions
 {
@@ -42,6 +43,10 @@ namespace Sales.WebApi.Extensions
             service.AddScoped<IRepositoryManager, RepositoryManager>();
 
         public static void ConfigureAddEditSalesPersonService(this IServiceCollection service) =>
-            service.AddScoped<IAddEditSalesPersonService, AddEditSalesPersonRepository>();
+            service.AddScoped<IAddEditSalesPersonService, AddEditSalesPersonService>();
+        public static void ConfigureCartItemCreateOrderService(this IServiceCollection service) =>
+            service.AddScoped<ICartItemCreateOrderService, CartItemCreateOrderService>();
+        public static void ConfigureProductOnSaleService(this IServiceCollection service) =>
+            service.AddScoped<IProductOnSaleService, ProductOnSaleService>();
     }
 }
