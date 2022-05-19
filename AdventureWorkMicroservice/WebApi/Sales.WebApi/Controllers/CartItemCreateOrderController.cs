@@ -31,26 +31,40 @@ namespace Sales.WebApi.Controllers
 
             var shippedDto = _mapper.Map<ShipMethodDto>(shipped);
             return Ok(shippedDto);
-        }
+        } 
 
-        [HttpPost]
-        public async Task<IActionResult> AddShipMethod(int id,[FromBody] ShipMethodDto shipMethodDto)
+        [HttpGet]
+        public async Task<IActionResult> GetSalesOrderDetail(int salesOrderId, int salesOrderDetailId)
         {
             try
             {
-                var shipper = _cartItemCreateOrderService.AddShipMethod(id, shipMethodDto);
-                if(shipper == null)
-                {
-                    return BadRequest("Add Failed");
-                }
-                return NoContent();
+                var salesOrderDetail = await _repository.SalesOrderDetail.GetSalesOrderDetailAsync(salesOrderId,salesOrderDetailId,trackChanges: false);
+
+                return Ok(salesOrderDetail);
             }
             catch (Exception ex)
             {
-                _loggerManager.LogWarn($"message : {ex.Message}");
                 return BadRequest(ex.Message);
             }
-            
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PayByCardNumber(CardNumberDto cardNumberDto)
+        {
+            try
+            {
+                var cardNumber = await _cartItemCreateOrderService.CheckCardNumber(cardNumberDto);
+                if (cardNumber == null)
+                {
+                    return NotFound();
+                }
+                return Ok($"{cardNumber.CardNumber} Valid");
+            }
+            catch (Exception ex)
+            {
+                _loggerManager.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

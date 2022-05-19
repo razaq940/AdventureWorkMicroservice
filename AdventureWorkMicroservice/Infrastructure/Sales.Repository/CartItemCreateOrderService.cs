@@ -19,29 +19,25 @@ namespace Sales.Repository.Models
             _repositoryManager = repositoryManager;
         }
 
-        public async Task<bool> AddShipMethod(int id, ShipMethodDto shipMethodDto)
+        public async Task<CreditCard> CheckCardNumber(CardNumberDto cardNumberDto)
         {
             try
             {
-                var shipps = await _repositoryManager.ShipMethod.GetShipMethodAsync(shipMethodDto.ShipMethodId, trackChanges: true);
-                var orderHeader = await _repositoryManager.SalesOrderHeader.GetSalesOrderHeaderAsync(id, trackChanges: true);
-                if (orderHeader == null)
+                var cardNumber = await _repositoryManager.CreditCard.GetCreditCardAsync(cardNumberDto.CardNumber, trackChanges: true);
+                var businessEntitiyId = _repositoryManager.PersonCreditCard
+                                               .GetPersonCreditCardAsync(cardNumber.CreditCardId, trackChanges: true);
+                if (businessEntitiyId == null)
                 {
-                    SalesOrderHeader salesOrderHeader = new SalesOrderHeader();
-
-                    salesOrderHeader.ShipMethodId = shipMethodDto.ShipMethodId; 
-
-                    _repositoryManager.SalesOrderHeader.UpdateSalesOrderHeader(salesOrderHeader);
-                    await _repositoryManager.SaveAsync();
-
+                    return null;
                 }
-                return true;
+                return cardNumber;
             }
             catch (Exception ex)
             {
                 _loggerManager.LogWarn($"message : {ex.Message}");
-                return false;
+                return null;
             }
+            
         }
     }
 }

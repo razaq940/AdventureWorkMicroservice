@@ -20,6 +20,9 @@ namespace Sales.Contracts
         IShoppingCartItemRepository ShoppingCartItem { get; }
         IShipMethodRepository ShipMethod { get; }
         ISalesOrderHeaderRepository SalesOrderHeader { get; }
+        ISalesOrderDetailRepository SalesOrderDetail { get; }
+        ICreditCardRepository CreditCard { get; }
+        IPersonCreditCardRepository PersonCreditCard { get; }
         Task SaveAsync();
     }
 }

@@ -24,6 +24,9 @@ namespace Sales.Repository
         private IShoppingCartItemRepository _shoppingCartItemRepository;
         private IShipMethodRepository _shipMethodRepository;
         private ISalesOrderHeaderRepository _salesOrderHeaderRepository;
+        private ISalesOrderDetailRepository _salesOrderDetailRepository;
+        private ICreditCardRepository _creditCardRepository;
+        private IPersonCreditCardRepository _personCreditCardRepository;
 
         public RepositoryManager(RepositoryContext repositoryContext)
         {
@@ -160,6 +163,43 @@ namespace Sales.Repository
                 return _salesOrderHeaderRepository;
             }
         }
+
+        public ISalesOrderDetailRepository SalesOrderDetail
+        {
+            get
+            {
+                if (_salesOrderDetailRepository == null)
+                {
+                    _salesOrderDetailRepository = new SalesOrderDetailRepository(_repositoryContext);
+                }
+                return _salesOrderDetailRepository;
+            }
+        }
+
+        public ICreditCardRepository CreditCard
+        {
+            get
+            {
+                if (_creditCardRepository == null)
+                {
+                    _creditCardRepository = new CreditCardRepository(_repositoryContext);
+                }
+                return _creditCardRepository;
+            }
+        }
+
+        public IPersonCreditCardRepository PersonCreditCard
+        {
+            get
+            {
+                if (_personCreditCardRepository == null)
+                {
+                    _personCreditCardRepository = new PersonCreditCardRepository(_repositoryContext);
+                }
+                return _personCreditCardRepository;
+            }
+        }
+
         public async Task SaveAsync()
         {
             await _repositoryContext.SaveChangesAsync();

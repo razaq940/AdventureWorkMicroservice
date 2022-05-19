@@ -25,24 +25,24 @@ namespace Sales.Repository
         {
             try
             {
-                var person = await _repositoryManager.SalesPerson.GetSalesPersonAsync(addEditSalesPersonDto.BusinessEntityId, trackChanges: true);
+                var salesPerson = await _repositoryManager.SalesPerson.GetSalesPersonAsync(addEditSalesPersonDto.BusinessEntityId, trackChanges: true);
                 var salesPersonQuotaHistory = await _repositoryManager.SalesPersonQuotaHistory.GetSalesPersonQuotaHistoryByIdAsync(addEditSalesPersonDto.BusinessEntityId, trackChanges: false);
 
-                if (person == null)
+                if (salesPerson == null)
                 {
-                    person.SalesQuota = salesPersonQuotaHistory.SalesQuota;
-                    person.TerritoryId = addEditSalesPersonDto.TerritoryId;
-                    person.Bonus = 0;
-                    person.CommissionPct = 0;
-                    person.SalesYtd = 0;
-                    person.SalesLastYear = 0;
+                    salesPerson.SalesQuota = salesPersonQuotaHistory.SalesQuota;
+                    salesPerson.TerritoryId = addEditSalesPersonDto.TerritoryId;
+                    salesPerson.Bonus = 0;
+                    salesPerson.CommissionPct = 0;
+                    salesPerson.SalesYtd = 0;
+                    salesPerson.SalesLastYear = 0;
 
-                    _repositoryManager.SalesPerson.CreateSalesPersonAsync(person);
+                    _repositoryManager.SalesPerson.CreateSalesPersonAsync(salesPerson);
                     await _repositoryManager.SaveAsync();
                 }
 
-                person.TerritoryId = addEditSalesPersonDto.TerritoryId;
-                _repositoryManager.SalesPerson.UpdateSalesPersonAsync(person);
+                salesPerson.TerritoryId = addEditSalesPersonDto.TerritoryId;
+                _repositoryManager.SalesPerson.UpdateSalesPersonAsync(salesPerson);
                 await _repositoryManager.SaveAsync();
 
                 if (addEditSalesPersonDto.stores != null)
@@ -50,14 +50,13 @@ namespace Sales.Repository
                     foreach (var item in addEditSalesPersonDto.stores)
                     {
                         var store = await _repositoryManager.Store.GetStoreAsync(item, trackChanges: true);
-                        store.SalesPersonId = person.BusinessEntityId;
+                        store.SalesPersonId = salesPerson.BusinessEntityId;
 
                         _repositoryManager.Store.UpdateStoreAsync(store);
                         await _repositoryManager.SaveAsync();
                     }
                 }
                 
-
                 return true;
             }
             catch (Exception ex)
