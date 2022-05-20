@@ -116,11 +116,11 @@ namespace Sales.WebApi.Controllers
             try
             {
                 var result = await _addEditSalesPersonService.SaveSalesPerson(addEditSalesPersonDto);
-                if (!result)
+                if (result == null)
                 {
                     return BadRequest("Save Failed");
                 }
-                return NoContent();
+                return Ok($"{result.BusinessEntityId} Success");
             }
             catch (Exception ex)
             {

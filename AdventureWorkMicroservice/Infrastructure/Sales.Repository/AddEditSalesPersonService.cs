@@ -21,7 +21,7 @@ namespace Sales.Repository
             _repositoryManager = repositoryManager;
         }
 
-        public async Task<bool> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto)
+        public async Task<SalesPerson> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto)
         {
             try
             {
@@ -30,8 +30,14 @@ namespace Sales.Repository
 
                 if (salesPerson == null)
                 {
-                    salesPerson.SalesQuota = salesPersonQuotaHistory.SalesQuota;
-                    salesPerson.TerritoryId = addEditSalesPersonDto.TerritoryId;
+                    salesPerson = new SalesPerson();
+
+                    salesPerson.BusinessEntityId = addEditSalesPersonDto.BusinessEntityId;
+                    if (salesPersonQuotaHistory != null)
+                    {
+                        salesPerson.SalesQuota = salesPersonQuotaHistory.SalesQuota;
+                    }
+
                     salesPerson.Bonus = 0;
                     salesPerson.CommissionPct = 0;
                     salesPerson.SalesYtd = 0;
@@ -57,12 +63,12 @@ namespace Sales.Repository
                     }
                 }
                 
-                return true;
+                return salesPerson;
             }
-            catch (Exception ex)
+             catch (Exception ex)
             {
                 _loggerManager.LogWarn($"message : {ex.Message}");
-                return false;    
+                return null;    
             }
             
         }
