@@ -57,48 +57,54 @@ namespace Sales.WebApi.Controllers
         [HttpGet("store/{name}")]
         public async Task<IActionResult> GetStoreSearch(string name)
         {
-            var store = await _repository.Store.GetStoreAsync(name, trackChanges: true);
-
-            var storeDto = _mapper.Map<StoreDto>(store);
-            return Ok(storeDto);
+            try
+            {
+                var store = await _repository.Store.GetStoreAsync(name, trackChanges: true);
+                if (store == null)
+                {
+                    return NotFound();
+                }
+                var storeDto = _mapper.Map<StoreDto>(store);
+                return Ok(storeDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
+           
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateStore([FromBody]StoreDto storeDto)
+        public async Task<IActionResult> AddStoreSalesPerson(StoreDto storeDto)
         {
-            if (storeDto == null)
+            try
             {
-                _logger.LogError("Store Name object is null");
-                return BadRequest("Store Name object is null");
+                var addStore = await _addEditSalesPersonService.AddStoreAsync(storeDto);
+                if (addStore == null)
+                {
+                    return BadRequest("Save Failed");
+                }
+                return Ok(addStore);
             }
-
-            if (!ModelState.IsValid)
+            catch (Exception ex)
             {
-                _logger.LogError("Invalid modelstate storeDto");
-                return UnprocessableEntity(ModelState);
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
             }
-
-            var store = _mapper.Map<Store>(storeDto);
-            _repository.Store.CreateStoreAsync(store);
-            await _repository.SaveAsync();
-
-            return Ok(_mapper.Map<StoreDto>(store));
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStore(int id)
+        [HttpPost]
+        public async Task<IActionResult> DeleteStoreSalesPerson(StoreDto storeDto)
         {
-            var store = await _repository.Store.GetStoreByIdAsync(id, trackChanges: false);
+            var store = await _addEditSalesPersonService.DeleteStoreAsync(storeDto);
 
             if (store == null)
             {
-                _logger.LogInfo($"Store Name with id : {id} doesn't exist in database");
+                _logger.LogInfo($"Store Name with id : {store.Name} doesn't exist in database");
                 return NotFound();
             }
-
-            _repository.Store.DeleteStoreAsync(store);
-            await _repository.SaveAsync();
-            return NoContent();
+            return Ok($"{store.Name} Delete success");
         }
 
         [HttpGet("search/employee")]
@@ -127,7 +133,26 @@ namespace Sales.WebApi.Controllers
                 _logger.LogError(ex.Message);
                 return BadRequest(ex.Message);
             }
+        }
 
+        [HttpGet]
+        public async Task<IActionResult> GetEditSalesPerson(int salesPersonId)
+        {
+            try
+            {
+                var result = await _addEditSalesPersonService.GetEditSalesPerson(salesPersonId);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return BadRequest(ex.Message);
+            }
         }
 
     }

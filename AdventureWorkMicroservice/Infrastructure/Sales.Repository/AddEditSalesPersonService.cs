@@ -21,6 +21,88 @@ namespace Sales.Repository
             _repositoryManager = repositoryManager;
         }
 
+        public async Task<Store> AddStoreAsync(StoreDto storeDto)
+        {
+            try
+            {
+                var store = await _repositoryManager.Store.GetStoreAsync(storeDto.Name, trackChanges: true);
+
+                store.SalesPersonId = storeDto.SalesPersonId;
+
+                _repositoryManager.Store.UpdateStoreAsync(store);
+                await _repositoryManager.SaveAsync();
+
+                return store;
+            }
+            catch (Exception ex)
+            {
+                _loggerManager.LogWarn($"message : {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<Store> DeleteStoreAsync(StoreDto storeDto)
+        {
+            try
+            {
+                var store = _repositoryManager.Store.GetAllStoreAsync(trackChanges: true)
+                                .Result.Where(s => s.Name == storeDto.Name && s.SalesPersonId == storeDto.SalesPersonId)
+                                .SingleOrDefault();
+
+                store.SalesPersonId = null;
+
+                _repositoryManager.Store.UpdateStoreAsync(store);
+                await _repositoryManager.SaveAsync();
+
+                return store;
+            }
+            catch (Exception ex)
+            {
+                _loggerManager.LogWarn($"message : {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<EditSalesPersonDto> GetEditSalesPerson(int salesPersonId)
+        {
+            try
+            {
+                var employee = await _repositoryManager.Employee.GetEmployeesAsync(salesPersonId, trackChanges: false);
+                var person = await _repositoryManager.Person.GetPersonAsync(salesPersonId, trackChanges: false);
+                var store = _repositoryManager.Store.GetAllStoreAsync(trackChanges: false)
+                            .Result.Where(s => s.SalesPersonId == salesPersonId);
+                var salesPerson = await _repositoryManager.SalesPerson.GetSalesPersonAsync(salesPersonId, trackChanges: false);
+                var territoy = _repositoryManager.SalesTerritory.GetAllSalesTerritoryAsync(trackChanges: false)
+                               .Result.Where(t => t.TerritoryId == salesPerson.TerritoryId).FirstOrDefault();
+
+                EditSalesPersonDto editSalesPersonDto = new EditSalesPersonDto();
+
+                editSalesPersonDto.BusinessEntityId = salesPersonId;
+                editSalesPersonDto.FullName = $"{person.FirstName + person.MiddleName + person.LastName}";
+                editSalesPersonDto.NationalIdnumber = employee.NationalIdnumber;
+                editSalesPersonDto.JobTitle = employee.JobTitle;
+                editSalesPersonDto.TerritoryId = salesPerson.TerritoryId;
+                editSalesPersonDto.Name = territoy.Name;
+                editSalesPersonDto.CountryRegionCode = territoy.CountryRegionCode;
+                editSalesPersonDto.Group = territoy.Group;
+
+                List<string> storeName = new List<string>();
+
+                foreach (var item in store)
+                {
+                    storeName.Add(item.Name);
+                }
+                editSalesPersonDto.StoreName = storeName;
+
+                return editSalesPersonDto;
+            }
+            catch (Exception ex)
+            {
+                _loggerManager.LogWarn($"message : {ex.Message}");
+                return null;
+            }
+        }
+
         public async Task<SalesPerson> SaveSalesPerson(AddEditSalesPersonDto addEditSalesPersonDto)
         {
             try
@@ -38,10 +120,10 @@ namespace Sales.Repository
                         salesPerson.SalesQuota = salesPersonQuotaHistory.SalesQuota;
                     }
 
-                    salesPerson.Bonus = 0;
-                    salesPerson.CommissionPct = 0;
-                    salesPerson.SalesYtd = 0;
-                    salesPerson.SalesLastYear = 0;
+                    salesPerson.Bonus = addEditSalesPersonDto.Bonus;
+                    salesPerson.CommissionPct = addEditSalesPersonDto.CommissionPct;
+                    salesPerson.SalesYtd = addEditSalesPersonDto.SalesYtd;
+                    salesPerson.SalesLastYear = addEditSalesPersonDto.SalesLastYear;
 
                     _repositoryManager.SalesPerson.CreateSalesPersonAsync(salesPerson);
                     await _repositoryManager.SaveAsync();

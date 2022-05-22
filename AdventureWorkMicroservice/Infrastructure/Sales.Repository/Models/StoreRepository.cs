@@ -34,7 +34,7 @@ namespace Sales.Repository.Models
             await FindByCondition(s => s.Name.Contains(name), trackChanges).FirstOrDefaultAsync();
 
         public async Task<Store> GetStoreByIdAsync(int id, bool trackChanges) =>
-            await FindByCondition(s => s.BusinessEntityId.Equals(id), trackChanges).FirstOrDefaultAsync();
+            await FindByCondition(s => s.SalesPersonId.Equals(id), trackChanges).FirstOrDefaultAsync();
 
         public void UpdateStoreAsync(Store store)
         {

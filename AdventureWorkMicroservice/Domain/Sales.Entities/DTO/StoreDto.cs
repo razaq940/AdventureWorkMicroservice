@@ -8,6 +8,7 @@ namespace Sales.Entities.DTO
 {
     public class StoreDto
     {
+        public int SalesPersonId { get; set; }
         public string Name { get; set; }
     }
 }
