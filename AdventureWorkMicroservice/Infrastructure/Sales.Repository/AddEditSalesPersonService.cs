@@ -48,11 +48,14 @@ namespace Sales.Repository
                 var store = _repositoryManager.Store.GetAllStoreAsync(trackChanges: true)
                                 .Result.Where(s => s.Name == storeDto.Name && s.SalesPersonId == storeDto.SalesPersonId)
                                 .SingleOrDefault();
+                
+                if (store != null)
+                {
+                    store.SalesPersonId = null;
 
-                store.SalesPersonId = null;
-
-                _repositoryManager.Store.UpdateStoreAsync(store);
-                await _repositoryManager.SaveAsync();
+                    _repositoryManager.Store.UpdateStoreAsync(store);
+                    await _repositoryManager.SaveAsync();
+                }
 
                 return store;
             }
@@ -139,7 +142,7 @@ namespace Sales.Repository
                     {
                         var store = await _repositoryManager.Store.GetStoreAsync(item, trackChanges: true);
                         store.SalesPersonId = salesPerson.BusinessEntityId;
-
+                        
                         _repositoryManager.Store.UpdateStoreAsync(store);
                         await _repositoryManager.SaveAsync();
                     }

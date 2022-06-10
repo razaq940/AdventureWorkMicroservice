@@ -1,4 +1,5 @@
 ﻿using Sales.Entities.DTO;
+using Sales.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Sales.Contracts
 {
     public interface IProductOnSaleService
     {
-        Task<bool> AddToCartProduct(AddToCartDto addToCartDto);
+        Task<ShoppingCartItem> AddToCartProduct(AddToCartDto addToCartDto);
     }
 }

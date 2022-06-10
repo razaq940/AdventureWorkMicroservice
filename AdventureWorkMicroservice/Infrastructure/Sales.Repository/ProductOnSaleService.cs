@@ -19,11 +19,13 @@ namespace Sales.Repository
             _repositoryManager = repositoryManager;
         }
 
-        public async Task<bool> AddToCartProduct(AddToCartDto addToCartDto)
+        public async Task<ShoppingCartItem> AddToCartProduct(AddToCartDto addToCartDto)
         {
             try
             {
-                var cartItems = await _repositoryManager.ShoppingCartItem.GetShoppingCartItemAsync(addToCartDto.ProductId, trackChanges: true);
+                var cartItems = _repositoryManager.ShoppingCartItem.GetAllShoppingCartItemsAsync(trackChanges: true)
+                                .Result.Where(ci => ci.ProductId == addToCartDto.ProductId && ci.ShoppingCartId == addToCartDto.CustomerId)
+                                .SingleOrDefault();
 
                 if (cartItems == null)
                 {
@@ -38,12 +40,19 @@ namespace Sales.Repository
                     _repositoryManager.ShoppingCartItem.CreateShoppingCartItem(cartItem);
                     await _repositoryManager.SaveAsync();
                 }
-                return true;
+                else
+                {
+                    cartItems.Quantity += 1;
+                    _repositoryManager.ShoppingCartItem.UpdateShoppingCartItem(cartItems);
+                    await _repositoryManager.SaveAsync();
+                }
+
+                return cartItems;
             }
             catch (Exception ex)
             {
                 _loggerManager.LogWarn($"message : {ex.Message}");
-                return false;
+                return null;
             }
         }
     }

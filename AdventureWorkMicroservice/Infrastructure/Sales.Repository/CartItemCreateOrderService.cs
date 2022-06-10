@@ -24,8 +24,8 @@ namespace Sales.Repository.Models
             try
             {
                 var cardNumber = await _repositoryManager.CreditCard.GetCreditCardAsync(cardNumberDto.CardNumber, trackChanges: true);
-                var businessEntitiyId = _repositoryManager.PersonCreditCard
-                                               .GetPersonCreditCardAsync(cardNumber.CreditCardId, trackChanges: true);
+                var businessEntitiyId = await _repositoryManager.PersonCreditCard
+                                        .GetPersonCreditCardAsync(cardNumber.CreditCardId, trackChanges: true);
                 if (businessEntitiyId == null)
                 {
                     return null;

@@ -30,11 +30,11 @@ namespace Sales.WebApi.Controllers
             try
             {
                 var result = await _productOnSaleService.AddToCartProduct(addToCartDto);
-                if(!result)
+                if(result == null)
                 {
                     return BadRequest("Add Failed");
                 }
-                return NoContent();
+                return Ok(result);
             }
             catch (Exception ex)
             {

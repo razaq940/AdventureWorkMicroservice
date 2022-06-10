@@ -58,7 +58,7 @@ namespace Sales.WebApi.Controllers
                 {
                     return NotFound();
                 }
-                return Ok($"{cardNumber.CardNumber} Valid");
+                return Ok($"{cardNumber.CardNumber} Card Number Valid");
             }
             catch (Exception ex)
             {

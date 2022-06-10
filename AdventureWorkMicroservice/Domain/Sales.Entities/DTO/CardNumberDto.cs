@@ -8,8 +8,6 @@ namespace Sales.Entities.DTO
 {
     public class CardNumberDto
     {
-        public int BusinessEntityId { get; set; }
-        public int CreditCardId { get; set; }
         public string CardNumber { get; set; }
     }
 }

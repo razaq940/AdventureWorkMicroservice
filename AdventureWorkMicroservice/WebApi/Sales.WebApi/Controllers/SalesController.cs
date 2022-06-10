@@ -6,6 +6,7 @@ using Sales.Entities.Models;
 using Sales.Entities.RequestFeatures;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Sales.WebApi.Controllers
@@ -52,6 +53,16 @@ namespace Sales.WebApi.Controllers
 
             var salesTerritoryDtos = _mapper.Map<SalesTerritoryDto>(salesTerritory);
             return Ok(salesTerritoryDtos);
+        }
+
+        [HttpGet("employee/{name}")]
+        public async Task<IActionResult> GetEmployeeSearch(string name)
+        {
+            var employeePerson = _repository.EmployeePerson.GetAllVEmployeePersonAsync(trackChanges: true)
+                                   .Result.Where(ep => ep.FullName.Contains(name)).FirstOrDefault();
+
+            var employeePersonDto = _mapper.Map<VEmployeePersonDto>(employeePerson);
+            return Ok(employeePersonDto);
         }
 
         [HttpGet("store/{name}")]
@@ -104,7 +115,7 @@ namespace Sales.WebApi.Controllers
                 _logger.LogInfo($"Store Name with id : {store.Name} doesn't exist in database");
                 return NotFound();
             }
-            return Ok($"{store.Name} Delete success");
+            return Ok($"Name store {store.Name} Deleted successfully");
         }
 
         [HttpGet("search/employee")]
@@ -126,7 +137,7 @@ namespace Sales.WebApi.Controllers
                 {
                     return BadRequest("Save Failed");
                 }
-                return Ok($"{result.BusinessEntityId} Success");
+                return Ok(result);
             }
             catch (Exception ex)
             {
